@@ -49,7 +49,7 @@ for run in ['FIRST RUN', 'SECOND RUN']:
     for m in ['get_categories_from_db', 'get_categories_from_memcached', 'get_categories_from_pickledfile', 'get_categories_from_pythonsrc']:
         print m
         start = time.time()
-        for i in range(2**14):
+        for i in range(2**15):
             categories = locals()[m]()
         print time.time() - start
 
